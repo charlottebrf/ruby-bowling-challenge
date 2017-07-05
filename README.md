@@ -1,5 +1,5 @@
 ## Ruby Bowling Challenge
-
+[![Build Status](https://travis-ci.org/charlottebrf/ruby-bowling-challenge.svg?branch=master)](https://travis-ci.org/charlottebrf/ruby-bowling-challenge)
 
 This challenge was originally set in Javascript. You can find my first try of the bowling challenge in Javascript [here](https://github.com/charlottebrf/bowling-challenge).
 
