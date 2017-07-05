@@ -1,5 +1,6 @@
 ## Ruby Bowling Challenge
 
+
 This challenge was originally set in Javascript. You can find my first try of the bowling challenge in Javascript [here](https://github.com/charlottebrf/bowling-challenge).
 
 # The bowling task
