@@ -1,6 +1,6 @@
 class Frame
 
-  attr_reader :frame
+  attr_reader :frame, :create_frame  
 
   def initialize
     @frame = ['-','-']
