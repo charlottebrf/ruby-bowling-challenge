@@ -1,9 +1,9 @@
 class Game
 
-  attr_reader :total_frames
+  attr_reader :ten_frames
 
   def initialize(frame = Frame.new)
-    @total_frames = frame.create_frame(1)
+    @ten_frames = frame.create_frame(10)
   end
 
   def add_first_roll(knocked_over_pins, frame)
@@ -20,6 +20,12 @@ class Game
       frame[1] = second_pin
     end
     frame[1]
+  end
+
+  def finish_frame(knocked_over_pins, frame)
+    add_first_roll(knocked_over_pins, frame)
+    add_second_roll(knocked_over_pins, frame)
+    frame
   end
 
 end

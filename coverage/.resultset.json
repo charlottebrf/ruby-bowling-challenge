@@ -30,7 +30,7 @@
         null,
         null,
         1,
-        17,
+        44,
         null,
         null,
         null
@@ -62,6 +62,14 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/charlottefereday/Development/ruby-bowling-challenge/lib/game.rb": [
@@ -89,9 +97,15 @@
         1,
         null,
         null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1499530427
+    "timestamp": 1499531836
   }
 }
