@@ -17,4 +17,11 @@ describe Game do
     end
   end
 
+  describe "#add_second_roll" do
+    it "adds the number of knocked over pins from the second roll to the frames" do
+      result = game.add_second_roll([1, 7], ["-", "-"])
+      expect(result).to equal 7
+    end
+  end
+
 end

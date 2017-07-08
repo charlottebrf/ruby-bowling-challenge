@@ -14,4 +14,12 @@ class Game
     frame[0]
   end
 
+  def add_second_roll(knocked_over_pins, frame)
+    if frame[1] == "-"
+      second_pin = knocked_over_pins[1]
+      frame[1] = second_pin
+    end
+    frame[1]
+  end
+
 end
