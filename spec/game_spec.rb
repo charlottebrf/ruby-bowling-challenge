@@ -39,6 +39,12 @@ describe Game do
       game.add_frame_to_game([1, 7])
       expect(game.game_frames).equal? [[1, 7]]
     end
+
+    it 'if there are 10 frames it returns without adding the frames' do
+      game1 = Game.new
+      frames = 10.times { game1.add_frame_to_game([1,1]) }
+      expect { game1.add_frame_to_game([2, 2]) }.to raise_error('Game over!!')
+    end
   end
 
   describe '#ten_frames?' do

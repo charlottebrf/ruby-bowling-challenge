@@ -8,8 +8,12 @@ class Game
   end
 
   def add_frame_to_game(knocked_over_pins)
-    result = finish_frame(knocked_over_pins, @frame.flatten)
-    @game_frames << result
+    if ten_frames?
+      raise 'Game over!!'
+    else
+      result = finish_frame(knocked_over_pins, @frame.flatten)
+      @game_frames << result
+    end
   end
 
   def add_roll_to_frame(knocked_over_pins, frame, index)
