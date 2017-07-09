@@ -4,9 +4,14 @@ describe Game do
   subject(:game) { described_class.new }
 
   describe '#initialize' do
-    it 'is initialized with a frame' do
-      all_frames = game.ten_frames
-      expect(all_frames.length).to equal 10
+    it 'is initialized with a frame instance' do
+      game_frame = game.frame
+      expect(game_frame).equal? ['-', '-']
+    end
+
+    it 'is initialized an game_frames to store the frames' do
+      all_frames = game.game_frames
+      expect(all_frames).equal? []
     end
   end
 
@@ -28,6 +33,13 @@ describe Game do
     it 'adds the result of the first and second rolls to the frame' do
       result = game.finish_frame([1, 7], ['-', '-'])
       expect(result).equal? [1, 7]
+    end
+  end
+
+  describe '#add_frame_game' do
+    it 'adds the frame pins to the all_frames array' do
+      game.add_frame_game([1, 7])
+      expect(game.game_frames).equal? [[1, 7]]
     end
   end
 end

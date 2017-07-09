@@ -19,7 +19,6 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
     end
 
     config.mock_with :rspec do |mocks|
-
       mocks.verify_partial_doubles = true
     end
 

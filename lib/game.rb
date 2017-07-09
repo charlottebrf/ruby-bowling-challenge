@@ -1,9 +1,15 @@
 # Understands managing the scores of bowling games
 class Game
-  attr_reader :ten_frames
+  attr_accessor :frame, :game_frames
 
   def initialize(frame = Frame.new)
-    @ten_frames = frame.create_frame(10)
+    @game_frames = []
+    @frame = frame.create_frame(1)
+  end
+
+  def add_frame_game(knocked_over_pins)
+    result = finish_frame(knocked_over_pins, @frame.flatten)
+    @game_frames << result
   end
 
   def add_first_roll(knocked_over_pins, frame)

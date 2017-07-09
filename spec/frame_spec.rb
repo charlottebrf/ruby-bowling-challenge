@@ -13,5 +13,9 @@ describe Frame do
     it 'has 10 frames' do
       expect(frame.create_frame(10).length).to eq 10
     end
+
+    it 'creates a frame' do
+      expect(frame.create_frame(1)).to eq [['-', '-']]
+    end
   end
 end
