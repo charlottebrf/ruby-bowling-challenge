@@ -12,25 +12,17 @@ class Game
     @game_frames << result
   end
 
-  def add_first_roll(knocked_over_pins, frame)
-    if frame[0] == '-'
-      first_pin = knocked_over_pins[0]
-      frame[0] = first_pin
+  def add_roll_to_frame(knocked_over_pins, frame, index)
+    if frame[index] == '-'
+      first_pin = knocked_over_pins[index]
+      frame[index] = first_pin
     end
-    frame[0]
-  end
-
-  def add_second_roll(knocked_over_pins, frame)
-    if frame[1] == '-'
-      second_pin = knocked_over_pins[1]
-      frame[1] = second_pin
-    end
-    frame[1]
+    frame[index]
   end
 
   def finish_frame(knocked_over_pins, frame)
-    add_first_roll(knocked_over_pins, frame)
-    add_second_roll(knocked_over_pins, frame)
+    add_roll_to_frame(knocked_over_pins, frame, 0)
+    add_roll_to_frame(knocked_over_pins, frame, 1)
     frame
   end
 end

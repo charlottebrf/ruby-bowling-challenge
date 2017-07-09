@@ -15,16 +15,14 @@ describe Game do
     end
   end
 
-  describe '#add_first_roll' do
+  describe '#add_roll' do
     it 'adds the number of pins from the first roll to the frames' do
-      result = game.add_first_roll([1, 7], ['-', '-'])
+      result = game.add_roll_to_frame([1, 7], ['-', '-'], 0)
       expect(result).to equal 1
     end
-  end
 
-  describe '#add_second_roll' do
     it 'adds the number of pins from the second roll to the frames' do
-      result = game.add_second_roll([1, 7], ['-', '-'])
+      result = game.add_roll_to_frame([1, 7], ['-', '-'], 1)
       expect(result).to equal 7
     end
   end
