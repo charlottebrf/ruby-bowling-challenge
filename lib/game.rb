@@ -1,5 +1,5 @@
+# Understands managing the scores of bowling games
 class Game
-
   attr_reader :ten_frames
 
   def initialize(frame = Frame.new)
@@ -7,7 +7,7 @@ class Game
   end
 
   def add_first_roll(knocked_over_pins, frame)
-    if frame[0] == "-"
+    if frame[0] == '-'
       first_pin = knocked_over_pins[0]
       frame[0] = first_pin
     end
@@ -15,7 +15,7 @@ class Game
   end
 
   def add_second_roll(knocked_over_pins, frame)
-    if frame[1] == "-"
+    if frame[1] == '-'
       second_pin = knocked_over_pins[1]
       frame[1] = second_pin
     end
@@ -27,5 +27,4 @@ class Game
     add_second_roll(knocked_over_pins, frame)
     frame
   end
-
 end

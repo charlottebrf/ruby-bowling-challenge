@@ -1,13 +1,12 @@
+# Understands the instantiation & creation of a frame
 class Frame
-
-  attr_reader :frame, :create_frame  
+  attr_reader :frame, :create_frame
 
   def initialize
-    @frame = ['-','-']
+    @frame = ['-', '-']
   end
 
   def create_frame(num)
-    num.times.map {|frame| @frame }
+    num.times.map { @frame }
   end
-
 end
