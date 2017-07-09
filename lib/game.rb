@@ -2,12 +2,12 @@
 class Game
   attr_accessor :frame, :game_frames
 
-  def initialize(frame = Frame.new)
-    @game_frames = []
+  def initialize(frame = Frame.new, game_frames = [])
+    @game_frames = game_frames
     @frame = frame.create_frame(1)
   end
 
-  def add_frame_game(knocked_over_pins)
+  def add_frame_to_game(knocked_over_pins)
     result = finish_frame(knocked_over_pins, @frame.flatten)
     @game_frames << result
   end
@@ -24,5 +24,9 @@ class Game
     add_roll_to_frame(knocked_over_pins, frame, 0)
     add_roll_to_frame(knocked_over_pins, frame, 1)
     frame
+  end
+
+  def ten_frames?
+    @game_frames.count == 10
   end
 end

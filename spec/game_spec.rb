@@ -36,8 +36,16 @@ describe Game do
 
   describe '#add_frame_game' do
     it 'adds the frame pins to the all_frames array' do
-      game.add_frame_game([1, 7])
+      game.add_frame_to_game([1, 7])
       expect(game.game_frames).equal? [[1, 7]]
+    end
+  end
+
+  describe '#ten_frames?' do
+    it 'returns true if the array contains ten frames' do
+      game1 = Game.new
+      frames = 10.times { game1.add_frame_to_game([1,1]) }
+      expect(game1.ten_frames?).to equal true
     end
   end
 end
